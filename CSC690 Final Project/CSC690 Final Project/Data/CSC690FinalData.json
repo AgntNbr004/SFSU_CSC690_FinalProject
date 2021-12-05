@@ -1,0 +1,299 @@
+[
+    {
+        "id": 1,
+        "tier": 1,
+        "name": "CHARACTER CRAFTING",
+        "level": 0,
+        "chosen": true,
+        "parent": 0,
+        "desc": "Unlocks crafting"
+    },
+    {
+        "id": 2,
+        "tier": 1,
+        "name": "STONE PILE",
+        "level": 0,
+        "chosen": true,
+        "parent": 1,
+        "desc": "A pile of stones."
+    },
+    {
+        "id": 3,
+        "tier": 1,
+        "name": "WOOD PILE",
+        "level": 0,
+        "chosen": true,
+        "parent": 1,
+        "desc": "Stack and store wood."
+    },
+    {
+        "id": 4,
+        "tier": 1,
+        "name": "STONE AXE",
+        "level": 0,
+        "chosen": true,
+        "parent": 1,
+        "desc": "A roughly-made axe, but fells trees well enough."
+    },
+    {
+        "id": 5,
+        "tier": 1,
+        "name": "STONE PICKAXE",
+        "level": 0,
+        "chosen": true,
+        "parent": 1,
+        "desc": "Break rocks with stone."
+    },
+    {
+        "id": 7,
+        "tier": 1,
+        "name": "CAMPFIRE",
+        "level": 1,
+        "chosen": false,
+        "parent": 1,
+        "desc": "A place to cook food and fend the cold away."
+    },
+    {
+        "id": 6,
+        "tier": 1,
+        "name": "BEDROLL",
+        "level": 1,
+        "chosen": false,
+        "parent": 7,
+        "desc": "More restorative than sleeping on bare ground."
+    },
+    {
+        "id": 8,
+        "tier": 1,
+        "name": "WOOD SPEAR",
+        "level": 1,
+        "chosen": false,
+        "parent": 1,
+        "desc": "Simple to make, easy to break."
+    },
+    {
+        "id": 9,
+        "tier": 1,
+        "name": "BONE SPEAR",
+        "level": 5,
+        "chosen": false,
+        "parent": 8,
+        "desc": "A bone blade improves mellee and ranged damage."
+    },
+    {
+        "id": 10,
+        "tier": 1,
+        "name": "FIREPIT",
+        "level": 5,
+        "chosen": false,
+        "parent": 7,
+        "desc": "A large, stone-line pit for swift cooking and heating."
+    },
+    {
+        "id": 11,
+        "tier": 1,
+        "name": "FIRE WHACKER",
+        "level": 1,
+        "chosen": false,
+        "parent": 7,
+        "desc": "Quickly beats out fires."
+    },
+    {
+        "id": 12,
+        "tier": 1,
+        "name": "STONE KNIFE",
+        "level": 1,
+        "chosen": false,
+        "parent": 1,
+        "desc": "A basic hunting tool, strong and sharp enough ... just."
+    },
+    {
+        "id": 13,
+        "tier": 1,
+        "name": "BONE KNIFE",
+        "level": 5,
+        "chosen": false,
+        "parent": 12,
+        "desc": "Stronger, lighter, and sharper than its stone cousin."
+    },
+    {
+        "id": 14,
+        "tier": 1,
+        "name": "BONE SICKLE",
+        "level": 1,
+        "chosen": false,
+        "parent": 13,
+        "desc": "Repurposed remains for easy reaping."
+    },
+    {
+        "id": 16,
+        "tier": 1,
+        "name": "WOOD RAG TORCH",
+        "level": 1,
+        "chosen": false,
+        "parent": 1,
+        "desc": "An easily crafted source of illumination."
+    },
+    {
+        "id": 15,
+        "tier": 1,
+        "name": "WOOD TORCH",
+        "level": 5,
+        "chosen": false,
+        "parent": 16,
+        "desc": "A longer burning source of light in the darkness."
+    },
+    {
+        "id": 17,
+        "tier": 1,
+        "name": "FLOOR TORCH",
+        "level": 5,
+        "chosen": false,
+        "parent": 16,
+        "desc": "A free-standing torch requiring sticks for fuel."
+    },
+    {
+        "id": 18,
+        "tier": 1,
+        "name": "WOOD REPAIR HAMMER",
+        "level": 1,
+        "chosen": false,
+        "parent": 1,
+        "desc": "Maintain your structures against the wrath of Icarus."
+    },
+    {
+        "id": 19,
+        "tier": 1,
+        "name": "BUILDING UPGRADE TOOL",
+        "level": 5,
+        "chosen": false,
+        "parent": 18,
+        "desc": "Improve your structures without tearing them down."
+    },
+    {
+        "id": 21,
+        "tier": 1,
+        "name": "BASIC BANDAGE",
+        "level": 1,
+        "chosen": false,
+        "parent": 1,
+        "desc": "Cloth bandages to stem bleeding and heal minor wounds."
+    },
+    {
+        "id": 20,
+        "tier": 1,
+        "name": "SUTURE KIT",
+        "level": 5,
+        "chosen": false,
+        "parent": 21,
+        "desc": "A basic medical kit for healing deep wounds."
+    },
+    {
+        "id": 22,
+        "tier": 1,
+        "name": "WOOD BOW",
+        "level": 1,
+        "chosen": false,
+        "parent": 1,
+        "desc": "A primitive bow with limited range and durability."
+    },
+    {
+        "id": 23,
+        "tier": 1,
+        "name": "STONE ARROW",
+        "level": 1,
+        "chosen": false,
+        "parent": 22,
+        "desc": "The most basic version of an ancient weapon."
+    },
+    {
+        "id": 24,
+        "tier": 1,
+        "name": "SPLINT",
+        "level": 5,
+        "chosen": false,
+        "parent": 21,
+        "desc": "Speeds the healing of a broken leg."
+    },
+    {
+        "id": 25,
+        "tier": 1,
+        "name": "HEAT BANDAGE",
+        "level": 5,
+        "chosen": false,
+        "parent": 21,
+        "desc": "Cloth bandages impregnated with a warming salve, for treating frostbite."
+    },
+    {
+        "id": 27,
+        "tier": 1,
+        "name": "BONE ARROW",
+        "level": 5,
+        "chosen": false,
+        "parent": 23,
+        "desc": "A primitive arrow, dealing greater damage than flint or stone."
+    },
+    {
+        "id": 26,
+        "tier": 1,
+        "name": "FLARE ARROW",
+        "level": 1,
+        "chosen": false,
+        "parent": 27,
+        "desc": "Projects your position into the sky."
+    },
+    {
+        "id": 28,
+        "tier": 1,
+        "name": "ANTI-PARASITIC PASTE",
+        "level": 5,
+        "chosen": false,
+        "parent": 1,
+        "desc": "A medical preparation for reducing the effects of festering wounds."
+    },
+    {
+        "id": 29,
+        "tier": 1,
+        "name": "ANTI-POISON PASTE",
+        "level": 15,
+        "chosen": false,
+        "parent": 1,
+        "desc": "A basic toixcology and anti-venom kit to reduce the effects of poisoning."
+    },
+    {
+        "id": 30,
+        "tier": 1,
+        "name": "FIRE ARROW",
+        "level": 20,
+        "chosen": false,
+        "parent": 26,
+        "desc": "Share the warmth."
+    },
+    {
+        "id": 31,
+        "tier": 1,
+        "name": "POISON ARROW",
+        "level": 15,
+        "chosen": false,
+        "parent": 27,
+        "desc": "Slow death, with a point."
+    },
+    {
+        "id": 32,
+        "tier": 1,
+        "name": "BLOOD THINNING PASTE",
+        "level": 5,
+        "chosen": false,
+        "parent": 1,
+        "desc": "A folk remedy for diminishing the effects of concussions and contusions."
+    },
+    {
+        "id": 33,
+        "tier": 1,
+        "name": "ANTIBIOTIC PASTE",
+        "level": 5,
+        "chosen": false,
+        "parent": 1,
+        "desc": "Reduces the effects of food poisoning, and other low grade infections."
+    }
+]
