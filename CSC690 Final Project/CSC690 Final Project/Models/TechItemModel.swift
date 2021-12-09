@@ -12,7 +12,7 @@ struct Tier: Codable {
     var items: [TechItem]
 }
 
-struct TechItem: Codable {
+struct TechItem: Codable, Identifiable {
     var id: Int16
     var name: String
     var level: Int16

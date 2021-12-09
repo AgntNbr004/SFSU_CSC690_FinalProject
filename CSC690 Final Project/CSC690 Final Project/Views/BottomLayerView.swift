@@ -35,9 +35,11 @@ struct BottomLayerView: View {
                     && self.cVM.pointsAvailable > 0
                     && !data.value.locked) {
                     data.value.chosen = !data.value.chosen
-                    
                     self.cVM.pointsAvailable += data.value.chosen ? -1 : 1
-                    // TODO: Update children of node to reflect that they are no longer locked...
+                    // self.cVM.updateChildLocks(parentId: data.value.id)
+                    for node in self.cVM.TechItems {
+                        print(node)
+                    }
                 }
             })
     }

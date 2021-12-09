@@ -62,9 +62,27 @@ class BinaryTreeData: ObservableObject {
         }
     }
     
-    // When a 
-    func updateChildLocks() {
+    // When an item is chosen, traverse the tree and update all child items to set locked to false
+    func updateChildLocks(parentId: Int16) {
+        var node: Tree<TechItem> = Tree<TechItem>(TechItem(id: -1, name: "temp", level: -1, chosen: false, parent: -1, locked: true))
         
+        func searchTree(currentNode: Tree<TechItem>) {
+            if parentId == currentNode.value.id {
+                node = currentNode
+            } else {
+                for child in currentNode.children {
+                    searchTree(currentNode: child)
+                }
+            }
+        }
+        
+        searchTree(currentNode: binaryTree)
+        
+        for child in node.children {
+            child.value.locked = node.value.chosen
+        }
+        
+        uniqueTree = binaryTree.map(Unique.init)
     }
     
     // Convert the Tier information into a Tree
@@ -118,7 +136,7 @@ class BinaryTreeData: ObservableObject {
         uniqueTree = binaryTree.map(Unique.init)
     }
     
-    //
+    // Used to determine how many points to remove from the user.
     func calculateLevelPoints() -> Int {
         var totalPoints: Int = 0
         for point in 1...Int(self.currentLevel) {
