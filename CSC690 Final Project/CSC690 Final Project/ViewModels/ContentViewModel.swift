@@ -6,21 +6,42 @@
 //
 
 import Foundation
-
-let binaryTree = BinaryTreeData().binaryTree
-let uniqueTree: Tree<Unique<TechItem>> = binaryTree.map(Unique.init)
+import SwiftUI
 
 class BinaryTreeData: ObservableObject {
-    @Published var CurrentLevel: Int16 = 1
-    @Published var TechItems = [TechItem] ()
-    @Published var binaryTree: Tree<TechItem> = Tree<TechItem>(TechItem(id: -1, name: "temp", level: -1, chosen: false, parent: -1, desc: ""))
+    // Player info
+    @Published var currentLevel: Int16 = 1
+    @Published var pointsAvailable: Int = 0
+    @Published var levelPoints: Int = 0
+    @Published var activeTier: Int = 1
+    @Published var chosen: [TechItem] = []
     
-    init(currentLevel: Int16 = 1) {
-        self.CurrentLevel = currentLevel
+    // Data
+    @Published var Tiers = [Tier] ()
+    @Published var TechItems = [TechItem] ()
+    @Published var binaryTree: Tree<TechItem> = Tree<TechItem>(TechItem(id: -1, name: "temp", level: -1, chosen: false, parent: -1, locked: true))
+    @Published var uniqueTree: Tree<Unique<TechItem>> = Tree<TechItem>(TechItem(id: -1, name: "temp", level: -1, chosen: false, parent: -1, locked: true)).map(Unique.init)
+        
+    // UI
+    @Published var squareSide: CGFloat = 80.0
+    @Published var borderWidth: CGFloat = 3.0
+    @Published var reqLevelHeight: CGFloat = 25.0
+    @Published var checkboxSide: CGFloat = sqrt((25.0 * 25.0) + (25.0 * 25.0))
+    @Published var basePadding: CGFloat = 8.0
+    @Published var chosenGradient = Gradient(colors: [Color("Chosen Text Background Dark"),
+                                                      Color("Chosen Text Background Light")])
+    @Published var notChosenGradient = Gradient(colors: [Color("Not Chosen Text Background Dark"),
+                                                         Color("Not Chosen Text Background Dark")])
+    @Published var notAvailableGradient = Gradient(colors: [Color("Not Available Text Background Dark"),
+                                                            Color("Not Available Text Background Light")])
+    
+    init() {
         loadData()
+        pullTierData()
         dataToTree()
     }
     
+    // Read the initial JSON data into the Tier array
     func loadData() {
         guard let path = Bundle.main.url(forResource: "CSC690FinalData", withExtension: "json")
         else {
@@ -29,10 +50,24 @@ class BinaryTreeData: ObservableObject {
         }
         
         let data = try? Data(contentsOf: path)
-        let TechItems = try? JSONDecoder().decode([TechItem].self, from: data!)
-        self.TechItems = TechItems!
+        let Tiers = try? JSONDecoder().decode([Tier].self, from: data!)
+        self.Tiers = Tiers!
     }
     
+    // Pull information from the Tier array for the Tier currently on the screen.
+    func pullTierData() {
+        self.TechItems = self.Tiers[(activeTier - 1)].items
+        if (self.TechItems.isEmpty) {
+            print("No data was found for Tier \(activeTier)")
+        }
+    }
+    
+    // When a 
+    func updateChildLocks() {
+        
+    }
+    
+    // Convert the Tier information into a Tree
     func dataToTree() {
         binaryTree = Tree<TechItem>(self.TechItems[0])
         var remainders: [TechItem] = []
@@ -40,25 +75,27 @@ class BinaryTreeData: ObservableObject {
         // Initial process to thin the number of items to sort
         for item in self.TechItems.suffix(self.TechItems.count - 1) {
             if (item.parent == binaryTree.value.id) {
-                binaryTree.children.append(Tree<TechItem>(item))
+                binaryTree.addChild(childNode: Tree<TechItem>(item))
             } else {
                 remainders.append(item)
             }
         }
         
+        // Add the remaining items to the tree
         while !(remainders.isEmpty) {
             let results = attachTreeNodes(binaryTree: binaryTree, remainders: remainders)
             binaryTree = results.newTree
             remainders = results.newRemains
         }
         
+        // Function for finding where to add the remaining nodes and adding them
         func attachTreeNodes(binaryTree: Tree<TechItem>, remainders: [TechItem]) -> (newTree: Tree<TechItem>, newRemains: [TechItem], found: Bool) {
-            var returnTree = binaryTree
+            let returnTree = binaryTree
             var returnArray = remainders
             var recordFound: Bool = false
             
             if (returnTree.value.id == remainders[0].parent) {
-                returnTree.children.append(Tree<TechItem>(returnArray[0]))
+                returnTree.addChild(childNode: Tree<TechItem>(returnArray[0]))
                 returnArray.removeFirst()
                 recordFound = true
                 return (returnTree, returnArray, recordFound)
@@ -74,9 +111,19 @@ class BinaryTreeData: ObservableObject {
                 }
             }
             
-            // TODO: Fix this function. If the items parent is not yet in the list, it will fall into an infinite loop.
-            
             return (returnTree, returnArray, recordFound)
         }
+        
+        // Convert the Tree to a Unique Tree so it can be used in a ForEach loop
+        uniqueTree = binaryTree.map(Unique.init)
+    }
+    
+    //
+    func calculateLevelPoints() -> Int {
+        var totalPoints: Int = 0
+        for point in 1...Int(self.currentLevel) {
+            totalPoints += (point % 10 == 0 ? point : 3)
+        }
+        return totalPoints
     }
 }

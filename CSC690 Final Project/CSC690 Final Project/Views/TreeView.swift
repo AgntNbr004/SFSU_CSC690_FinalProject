@@ -19,7 +19,7 @@ struct Diagram<A: Identifiable, V: View>: View {
                .anchorPreference(key: Key.self, value: .center, transform: {
                    [self.tree.value.id: $0]
                })
-            HStack(alignment: .bottom, spacing: 10) {
+            HStack(alignment: .top, spacing: 10) {
                 ForEach(tree.children, id: \.value.id, content: { child in
                     Diagram(tree: child, node: self.node)
                 })

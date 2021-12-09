@@ -7,11 +7,16 @@
 
 import Foundation
 
+struct Tier: Codable {
+    var tier: Int16
+    var items: [TechItem]
+}
+
 struct TechItem: Codable {
     var id: Int16
     var name: String
     var level: Int16
     var chosen: Bool
     var parent: Int16
-    var desc: String
+    var locked: Bool
 }

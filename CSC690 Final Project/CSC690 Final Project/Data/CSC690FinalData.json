@@ -1,299 +1,655 @@
 [
-    {
-        "id": 1,
-        "tier": 1,
-        "name": "CHARACTER CRAFTING",
-        "level": 0,
-        "chosen": true,
-        "parent": 0,
-        "desc": "Unlocks crafting"
-    },
-    {
-        "id": 2,
-        "tier": 1,
-        "name": "STONE PILE",
-        "level": 0,
-        "chosen": true,
-        "parent": 1,
-        "desc": "A pile of stones."
-    },
-    {
-        "id": 3,
-        "tier": 1,
-        "name": "WOOD PILE",
-        "level": 0,
-        "chosen": true,
-        "parent": 1,
-        "desc": "Stack and store wood."
-    },
-    {
-        "id": 4,
-        "tier": 1,
-        "name": "STONE AXE",
-        "level": 0,
-        "chosen": true,
-        "parent": 1,
-        "desc": "A roughly-made axe, but fells trees well enough."
-    },
-    {
-        "id": 5,
-        "tier": 1,
-        "name": "STONE PICKAXE",
-        "level": 0,
-        "chosen": true,
-        "parent": 1,
-        "desc": "Break rocks with stone."
-    },
-    {
-        "id": 7,
-        "tier": 1,
-        "name": "CAMPFIRE",
-        "level": 1,
-        "chosen": false,
-        "parent": 1,
-        "desc": "A place to cook food and fend the cold away."
-    },
-    {
-        "id": 6,
-        "tier": 1,
-        "name": "BEDROLL",
-        "level": 1,
-        "chosen": false,
-        "parent": 7,
-        "desc": "More restorative than sleeping on bare ground."
-    },
-    {
-        "id": 8,
-        "tier": 1,
-        "name": "WOOD SPEAR",
-        "level": 1,
-        "chosen": false,
-        "parent": 1,
-        "desc": "Simple to make, easy to break."
-    },
-    {
-        "id": 9,
-        "tier": 1,
-        "name": "BONE SPEAR",
-        "level": 5,
-        "chosen": false,
-        "parent": 8,
-        "desc": "A bone blade improves mellee and ranged damage."
-    },
-    {
-        "id": 10,
-        "tier": 1,
-        "name": "FIREPIT",
-        "level": 5,
-        "chosen": false,
-        "parent": 7,
-        "desc": "A large, stone-line pit for swift cooking and heating."
-    },
-    {
-        "id": 11,
-        "tier": 1,
-        "name": "FIRE WHACKER",
-        "level": 1,
-        "chosen": false,
-        "parent": 7,
-        "desc": "Quickly beats out fires."
-    },
-    {
-        "id": 12,
-        "tier": 1,
-        "name": "STONE KNIFE",
-        "level": 1,
-        "chosen": false,
-        "parent": 1,
-        "desc": "A basic hunting tool, strong and sharp enough ... just."
-    },
-    {
-        "id": 13,
-        "tier": 1,
-        "name": "BONE KNIFE",
-        "level": 5,
-        "chosen": false,
-        "parent": 12,
-        "desc": "Stronger, lighter, and sharper than its stone cousin."
-    },
-    {
-        "id": 14,
-        "tier": 1,
-        "name": "BONE SICKLE",
-        "level": 1,
-        "chosen": false,
-        "parent": 13,
-        "desc": "Repurposed remains for easy reaping."
-    },
-    {
-        "id": 16,
-        "tier": 1,
-        "name": "WOOD RAG TORCH",
-        "level": 1,
-        "chosen": false,
-        "parent": 1,
-        "desc": "An easily crafted source of illumination."
-    },
-    {
-        "id": 15,
-        "tier": 1,
-        "name": "WOOD TORCH",
-        "level": 5,
-        "chosen": false,
-        "parent": 16,
-        "desc": "A longer burning source of light in the darkness."
-    },
-    {
-        "id": 17,
-        "tier": 1,
-        "name": "FLOOR TORCH",
-        "level": 5,
-        "chosen": false,
-        "parent": 16,
-        "desc": "A free-standing torch requiring sticks for fuel."
-    },
-    {
-        "id": 18,
-        "tier": 1,
-        "name": "WOOD REPAIR HAMMER",
-        "level": 1,
-        "chosen": false,
-        "parent": 1,
-        "desc": "Maintain your structures against the wrath of Icarus."
-    },
-    {
-        "id": 19,
-        "tier": 1,
-        "name": "BUILDING UPGRADE TOOL",
-        "level": 5,
-        "chosen": false,
-        "parent": 18,
-        "desc": "Improve your structures without tearing them down."
-    },
-    {
-        "id": 21,
-        "tier": 1,
-        "name": "BASIC BANDAGE",
-        "level": 1,
-        "chosen": false,
-        "parent": 1,
-        "desc": "Cloth bandages to stem bleeding and heal minor wounds."
-    },
-    {
-        "id": 20,
-        "tier": 1,
-        "name": "SUTURE KIT",
-        "level": 5,
-        "chosen": false,
-        "parent": 21,
-        "desc": "A basic medical kit for healing deep wounds."
-    },
-    {
-        "id": 22,
-        "tier": 1,
-        "name": "WOOD BOW",
-        "level": 1,
-        "chosen": false,
-        "parent": 1,
-        "desc": "A primitive bow with limited range and durability."
-    },
-    {
-        "id": 23,
-        "tier": 1,
-        "name": "STONE ARROW",
-        "level": 1,
-        "chosen": false,
-        "parent": 22,
-        "desc": "The most basic version of an ancient weapon."
-    },
-    {
-        "id": 24,
-        "tier": 1,
-        "name": "SPLINT",
-        "level": 5,
-        "chosen": false,
-        "parent": 21,
-        "desc": "Speeds the healing of a broken leg."
-    },
-    {
-        "id": 25,
-        "tier": 1,
-        "name": "HEAT BANDAGE",
-        "level": 5,
-        "chosen": false,
-        "parent": 21,
-        "desc": "Cloth bandages impregnated with a warming salve, for treating frostbite."
-    },
-    {
-        "id": 27,
-        "tier": 1,
-        "name": "BONE ARROW",
-        "level": 5,
-        "chosen": false,
-        "parent": 23,
-        "desc": "A primitive arrow, dealing greater damage than flint or stone."
-    },
-    {
-        "id": 26,
-        "tier": 1,
-        "name": "FLARE ARROW",
-        "level": 1,
-        "chosen": false,
-        "parent": 27,
-        "desc": "Projects your position into the sky."
-    },
-    {
-        "id": 28,
-        "tier": 1,
-        "name": "ANTI-PARASITIC PASTE",
-        "level": 5,
-        "chosen": false,
-        "parent": 1,
-        "desc": "A medical preparation for reducing the effects of festering wounds."
-    },
-    {
-        "id": 29,
-        "tier": 1,
-        "name": "ANTI-POISON PASTE",
-        "level": 15,
-        "chosen": false,
-        "parent": 1,
-        "desc": "A basic toixcology and anti-venom kit to reduce the effects of poisoning."
-    },
-    {
-        "id": 30,
-        "tier": 1,
-        "name": "FIRE ARROW",
-        "level": 20,
-        "chosen": false,
-        "parent": 26,
-        "desc": "Share the warmth."
-    },
-    {
-        "id": 31,
-        "tier": 1,
-        "name": "POISON ARROW",
-        "level": 15,
-        "chosen": false,
-        "parent": 27,
-        "desc": "Slow death, with a point."
-    },
-    {
-        "id": 32,
-        "tier": 1,
-        "name": "BLOOD THINNING PASTE",
-        "level": 5,
-        "chosen": false,
-        "parent": 1,
-        "desc": "A folk remedy for diminishing the effects of concussions and contusions."
-    },
-    {
-        "id": 33,
-        "tier": 1,
-        "name": "ANTIBIOTIC PASTE",
-        "level": 5,
-        "chosen": false,
-        "parent": 1,
-        "desc": "Reduces the effects of food poisoning, and other low grade infections."
-    }
+   {
+      "tier":1,
+      "items":[
+         {
+            "id":1,
+            "name":"CHARACTER CRAFTING",
+            "level":0,
+            "chosen":true,
+            "parent":0,
+            "locked":false
+         },
+         {
+            "id":4,
+            "name":"STONE AXE",
+            "level":0,
+            "chosen":true,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":5,
+            "name":"STONE PICKAXE",
+            "level":0,
+            "chosen":true,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":7,
+            "name":"CAMPFIRE",
+            "level":1,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":6,
+            "name":"BEDROLL",
+            "level":1,
+            "chosen":false,
+            "parent":7,
+            "locked":true
+         },
+         {
+            "id":10,
+            "name":"FIREPIT",
+            "level":5,
+            "chosen":false,
+            "parent":7,
+            "locked":true
+         },
+         {
+            "id":11,
+            "name":"FIRE WHACKER",
+            "level":1,
+            "chosen":false,
+            "parent":7,
+            "locked":true
+         },
+         {
+            "id":8,
+            "name":"WOOD\nSPEAR",
+            "level":1,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":9,
+            "name":"BONE SPEAR",
+            "level":5,
+            "chosen":false,
+            "parent":8,
+            "locked":true
+         },
+         {
+            "id":12,
+            "name":"STONE KNIFE",
+            "level":1,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":13,
+            "name":"BONE KNIFE",
+            "level":5,
+            "chosen":false,
+            "parent":12,
+            "locked":true
+         },
+         {
+            "id":14,
+            "name":"BONE\nSICKLE",
+            "level":1,
+            "chosen":false,
+            "parent":13,
+            "locked":true
+         },
+         {
+            "id":21,
+            "name":"BASIC BANDAGE",
+            "level":1,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":20,
+            "name":"SUTURE KIT",
+            "level":5,
+            "chosen":false,
+            "parent":21,
+            "locked":true
+         },
+         {
+            "id":24,
+            "name":"SPLINT",
+            "level":5,
+            "chosen":false,
+            "parent":21,
+            "locked":true
+         },
+         {
+            "id":25,
+            "name":"HEAT BANDAGE",
+            "level":5,
+            "chosen":false,
+            "parent":21,
+            "locked":true
+         },
+         {
+            "id":22,
+            "name":"WOOD BOW",
+            "level":1,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":23,
+            "name":"STONE ARROW",
+            "level":1,
+            "chosen":false,
+            "parent":22,
+            "locked":true
+         },
+         {
+            "id":27,
+            "name":"BONE\nARROW",
+            "level":5,
+            "chosen":false,
+            "parent":23,
+            "locked":true
+         },
+         {
+            "id":26,
+            "name":"FLARE\nARROW",
+            "level":1,
+            "chosen":false,
+            "parent":27,
+            "locked":true
+         },
+         {
+            "id":31,
+            "name":"POISON ARROW",
+            "level":15,
+            "chosen":false,
+            "parent":27,
+            "locked":true
+         },
+         {
+            "id":30,
+            "name":"FIRE ARROW",
+            "level":20,
+            "chosen":false,
+            "parent":26,
+            "locked":true
+         },
+         {
+            "id":28,
+            "name":"ANTI-PARASITIC PASTE",
+            "level":5,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":33,
+            "name":"ANTIBIOTIC PASTE",
+            "level":5,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":46,
+            "name":"THATCH\nBEAM",
+            "level":1,
+            "chosen":false,
+            "parent":1,
+            "locked":false
+         },
+         {
+            "id":50,
+            "name":"THATCH FLOOR",
+            "level":1,
+            "chosen":false,
+            "parent":46,
+            "locked":true
+         },
+         {
+            "id":45,
+            "name":"THATCH RAILING",
+            "level":1,
+            "chosen":false,
+            "parent":50,
+            "locked":true
+         },
+         {
+            "id":49,
+            "name":"THATCH FLOOR TRAPDOOR",
+            "level":5,
+            "chosen":false,
+            "parent":50,
+            "locked":true
+         },
+         {
+            "id":53,
+            "name":"THATCH TRAPDOOR",
+            "level":5,
+            "chosen":false,
+            "parent":49,
+            "locked":true
+         },
+         {
+            "id":58,
+            "name":"THATCH\nWALL",
+            "level":1,
+            "chosen":false,
+            "parent":50,
+            "locked":true
+         },
+         {
+            "id":55,
+            "name":"THATCH WINDOW",
+            "level":1,
+            "chosen":false,
+            "parent":58,
+            "locked":true
+         },
+         {
+            "id":57,
+            "name":"THATCH\nWALL\nANGLED",
+            "level":1,
+            "chosen":false,
+            "parent":58,
+            "locked":true
+         },
+         {
+            "id":61,
+            "name":"THATCH DOOR",
+            "level":1,
+            "chosen":false,
+            "parent":58,
+            "locked":true
+         },
+         {
+            "id":66,
+            "name":"THATCH ROOF/RAMP",
+            "level":1,
+            "chosen":false,
+            "parent":58,
+            "locked":true
+         },
+         {
+            "id":63,
+            "name":"THATCH\nROOF\nCORNER",
+            "level":1,
+            "chosen":false,
+            "parent":66,
+            "locked":true
+         },
+         {
+            "id":65,
+            "name":"THATCH HALFPITCHES",
+            "level":1,
+            "chosen":false,
+            "parent":66,
+            "locked":true
+         },
+         {
+            "id":69,
+            "name":"THATCH STAIRS",
+            "level":1,
+            "chosen":false,
+            "parent":66,
+            "locked":true
+         },
+         {
+            "id":71,
+            "name":"THATCH LADDER",
+            "level":1,
+            "chosen":false,
+            "parent":69,
+            "locked":true
+         },
+         {
+            "id":72,
+            "name":"THATCH HALFPIECES",
+            "level":1,
+            "chosen":false,
+            "parent":66,
+            "locked":true
+         }
+      ]
+   },
+   {
+      "tier":2,
+      "items":[
+         {
+            "id":75,
+            "name":"CRAFTING BENCH",
+            "level":10,
+            "chosen":false,
+            "parent":0,
+            "locked":false
+         },
+         {
+            "id":76,
+            "name":"OXITE DISSOLVER",
+            "level":1,
+            "chosen":false,
+            "parent":75,
+            "locked":true
+         },
+         {
+            "id":77,
+            "name":"RAIN\nRESIVOIR",
+            "level":1,
+            "chosen":false,
+            "parent":75,
+            "locked":true
+         },
+         {
+            "id":78,
+            "name":"ANVIL\nBENCH",
+            "level":1,
+            "chosen":false,
+            "parent":75,
+            "locked":true
+         },
+         {
+            "id":79,
+            "name":"IRON AXE",
+            "level":1,
+            "chosen":false,
+            "parent":78,
+            "locked":true
+         },
+         {
+            "id":80,
+            "name":"STEEL AXE",
+            "level":1,
+            "chosen":false,
+            "parent":79,
+            "locked":true
+         },
+         {
+            "id":81,
+            "name":"IRON\nPICKAXE",
+            "level":1,
+            "chosen":false,
+            "parent":78,
+            "locked":true
+         },
+         {
+            "id":82,
+            "name":"STEEL PICKAXE",
+            "level":1,
+            "chosen":false,
+            "parent":81,
+            "locked":true
+         },
+         {
+            "id":83,
+            "name":"IRON KNIFE",
+            "level":1,
+            "chosen":false,
+            "parent":78,
+            "locked":true
+         },
+         {
+            "id":84,
+            "name":"STEEL KNIFE",
+            "level":1,
+            "chosen":false,
+            "parent":83,
+            "locked":true
+         },
+         {
+            "id":85,
+            "name":"IRON SPEAR",
+            "level":1,
+            "chosen":false,
+            "parent":78,
+            "locked":true
+         },
+         {
+            "id":86,
+            "name":"STEEL SPEAR",
+            "level":1,
+            "chosen":false,
+            "parent":85,
+            "locked":true
+         },
+         {
+            "id":87,
+            "name":"MASONRY BENCH",
+            "level":15,
+            "chosen":false,
+            "parent":75,
+            "locked":true
+         },
+         {
+            "id":88,
+            "name":"STONE BEAM",
+            "level":1,
+            "chosen":false,
+            "parent":87,
+            "locked":true
+         },
+         {
+            "id":89,
+            "name":"STONE\nFRAME",
+            "level":1,
+            "chosen":false,
+            "parent":87,
+            "locked":true
+         },
+         {
+            "id":90,
+            "name":"STONE\nFLOOR",
+            "level":1,
+            "chosen":false,
+            "parent":88,
+            "locked":true
+         },
+         {
+            "id":91,
+            "name":"REINFORCED RAILING",
+            "level":1,
+            "chosen":false,
+            "parent":90,
+            "locked":true
+         },
+         {
+            "id":92,
+            "name":"STONE\nFLOOR TRAPDOOR",
+            "level":1,
+            "chosen":false,
+            "parent":90,
+            "locked":true
+         },
+         {
+            "id":93,
+            "name":"STONE WALL",
+            "level":1,
+            "chosen":false,
+            "parent":90,
+            "locked":true
+         },
+         {
+            "id":94,
+            "name":"REINFORCED TRAPDOOR",
+            "level":1,
+            "chosen":false,
+            "parent":92,
+            "locked":true
+         },
+         {
+            "id":95,
+            "name":"REINFORCED WINDOW",
+            "level":1,
+            "chosen":false,
+            "parent":93,
+            "locked":true
+         },
+         {
+            "id":96,
+            "name":"STONE WALL ANGLED",
+            "level":1,
+            "chosen":false,
+            "parent":93,
+            "locked":true
+         },
+         {
+            "id":97,
+            "name":"REINFORCED DOOR",
+            "level":1,
+            "chosen":false,
+            "parent":93,
+            "locked":true
+         },
+         {
+            "id":98,
+            "name":"STONE ROOF/RAMP",
+            "level":1,
+            "chosen":false,
+            "parent":93,
+            "locked":true
+         },
+         {
+            "id":99,
+            "name":"STONE ROOF CORNER",
+            "level":1,
+            "chosen":false,
+            "parent":98,
+            "locked":true
+         },
+         {
+            "id":100,
+            "name":"STONE HALFPITCHES",
+            "level":1,
+            "chosen":false,
+            "parent":98,
+            "locked":true
+         },
+         {
+            "id":101,
+            "name":"STONE HALFPIECES",
+            "level":1,
+            "chosen":false,
+            "parent":98,
+            "locked":true
+         },
+         {
+            "id":102,
+            "name":"STONE\nSTAIRS",
+            "level":1,
+            "chosen":false,
+            "parent":98,
+            "locked":true
+         },
+         {
+            "id":103,
+            "name":"REINFORCED LADDER",
+            "level":1,
+            "chosen":false,
+            "parent":102,
+            "locked":true
+         }
+      ]
+   },
+   {
+      "tier":3,
+      "items":[
+         {
+            "id":202,
+            "tier":3,
+            "name":"MACHINING BENCH",
+            "level":20,
+            "chosen":false,
+            "parent":0,
+            "locked":false
+         },
+         {
+            "id":203,
+            "name":"BASIC WALL LIGHT",
+            "level":1,
+            "chosen":false,
+            "parent":202,
+            "locked":true
+         },
+         {
+            "id":204,
+            "name":"BASIC\nCEILING LIGHT",
+            "level":1,
+            "chosen":false,
+            "parent":203,
+            "locked":true
+         },
+         {
+            "id":205,
+            "name":"BOLT ACTION RIFLE",
+            "level":25,
+            "chosen":false,
+            "parent":202,
+            "locked":true
+         },
+         {
+            "id":206,
+            "name":"CONCRETE FURNACE",
+            "level":1,
+            "chosen":false,
+            "parent":202,
+            "locked":true
+         }
+      ]
+   },
+   {
+      "tier":4,
+      "items":[
+         {
+            "id":299,
+            "name":"FABRICATOR",
+            "level":30,
+            "chosen":false,
+            "parent":0,
+            "locked":false
+         },
+         {
+            "id":300,
+            "name":"COMPOSITE CHEST ARMOR",
+            "level":35,
+            "chosen":false,
+            "parent":299,
+            "locked":true
+         },
+         {
+            "id":301,
+            "name":"MACHETE",
+            "level":1,
+            "chosen":false,
+            "parent":299,
+            "locked":true
+         },
+         {
+            "id":302,
+            "name":"COMBAT KNIFE",
+            "level":1,
+            "chosen":false,
+            "parent":301,
+            "locked":true
+         },
+         {
+            "id":303,
+            "name":"TITANIUM KNIFE",
+            "level":1,
+            "chosen":false,
+            "parent":302,
+            "locked":true
+         },
+         {
+            "id":304,
+            "name":"HUNTING RIFLE",
+            "level":1,
+            "chosen":false,
+            "parent":299,
+            "locked":true
+         }
+      ]
+   }
 ]

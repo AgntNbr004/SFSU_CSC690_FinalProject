@@ -11,6 +11,7 @@ import SwiftUI
 struct Line: Shape {
     var from: CGPoint
     var to: CGPoint
+    
     var animatableData: AnimatablePair<CGPoint, CGPoint> {
         get { AnimatablePair(from, to) }
         set {
@@ -49,5 +50,7 @@ extension CGPoint: VectorArithmetic {
         return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
     }
     
-    public var magnitudeSquared: Double { return Double(x * x + y * y) }
+    public var magnitudeSquared: Double {
+        return Double(x * x + y * y)
+    }
 }
